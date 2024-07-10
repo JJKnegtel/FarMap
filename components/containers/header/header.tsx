@@ -12,9 +12,9 @@ const learnMoreButton = (
   <Link
     target="_blank"
     rel="noopener noreferrer"
-    href="https://docs.thegrid.id"
+    href="https://warpcast.com/~/channel/farmap"
   >
-    <Button className="w-full md:w-fit">Read the docs</Button>
+    <Button className="w-full md:w-fit">Follow Farmap on Farcaster</Button>
   </Link>
 );
 
@@ -30,29 +30,16 @@ const claimProfileButton = (
   </Link>
 );
 
-const cloneRepoButton = (
-  <Link
-    href="https://github.com/The-Grid-Data/Explorer"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button className="w-full md:w-fit" variant="outline">
-      <SiGithub className="mr-2" size={18} />
-      Clone project
-    </Button>
-  </Link>
-);
-
 export const Header = () => {
   return (
     <header className="container flex w-full items-center py-4">
       <div className="w-full items-center justify-start">
         <Link href="/" className="flex items-center">
           <Image
-            alt="The grid logo"
-            src="/thegrid-logo.svg"
-            width={160}
-            height={1200}
+            alt="The Farmap logo"
+            src="/farmap_logo.svg"
+            width={250}
+            height={200}
           />
         </Link>
       </div>
@@ -60,7 +47,6 @@ export const Header = () => {
       <div className="hidden w-full items-center justify-end gap-2 md:flex">
         {learnMoreButton}
         {claimProfileButton}
-        {cloneRepoButton}
       </div>
       <Sheet>
         <SheetTrigger asChild className="flex w-full items-center justify-end">
@@ -80,9 +66,6 @@ export const Header = () => {
           <ul className="mt-4 flex flex-col gap-3">
             <li>
               <SheetTrigger asChild>{learnMoreButton}</SheetTrigger>
-            </li>
-            <li>
-              <SheetTrigger asChild>{cloneRepoButton}</SheetTrigger>
             </li>
           </ul>
         </SheetContent>
